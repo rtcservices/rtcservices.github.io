@@ -1,0 +1,16 @@
+#topscroll {
+  overflow: auto hidden;
+  margin: -15px 0 2px -15px;
+}
+#topscroll > div {
+  padding-top: 1px;
+}
+#bottomscroll {
+  overflow: auto hidden;
+  margin-right: 15px;
+}
+#bottomscroll > div {
+  margin: 0;
+  padding-left: 15px;
+  white-space: nowrap;
+}

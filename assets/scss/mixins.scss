@@ -1,0 +1,43 @@
+@mixin align-center {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 700px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == mobileonly {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == mobilekeyboardopen {
+    @media (max-width: 37.5em) and (max-height: 400px) {
+      @content;
+    }
+  }
+}
+// usage
+// h2 {
+//   color: $site-primary;
+//   @include breakpoint(mobileonly) {
+//     font-size: 0.9rem;
+//   }
+// }

@@ -1,0 +1,4 @@
+@use "./zindex";
+.picker-dialog {
+  z-index: map-get(zindex.$zindex, google-picker) !important;
+}

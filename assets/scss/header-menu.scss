@@ -1,0 +1,21 @@
+#header-nav {
+  .nav-link,
+  .dropdown-item {
+    cursor: pointer;
+    color: #0d6efd;
+    &:hover {
+      color: #fff;
+      background-color: #0d6efd;
+    }
+  }
+  .nav-item.show.dropdown {
+    background-color: #0d6efd;
+    a {
+      color: #fff;
+    }
+    .dropdown-menu h6 {
+      color: #0d6efd;
+      text-transform: uppercase;
+    }
+  }
+}
